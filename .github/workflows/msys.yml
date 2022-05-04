@@ -22,6 +22,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pacman.exe -Syu --noprogressbar --noconfirm
-      - run: pacman.exe -S --noprogressbar --noconfirm ${{ matrix.shells.package }}
+      - run: pacman.exe -Sy --noprogressbar --noconfirm ${{ matrix.shells.package }}
       - run: echo ok
 
