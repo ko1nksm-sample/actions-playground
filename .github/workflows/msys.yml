@@ -21,8 +21,7 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
-      - run: pacman.exe -Syu --noprogressbar --noconfirm
-      - run: pacman.exe -Syu --noprogressbar --noconfirm
+      - run: pacman.exe -Syyu --noprogressbar --noconfirm
       - run: pacman.exe -S --noprogressbar --noconfirm ${{ matrix.shells.package }}
       - run: echo ok
 
